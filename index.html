@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+</head>
+
+<body>
+    <h1>Simple Image Classification WebApp</h1>
+
+    <!-- File input to select an image -->
+    <input type="file" id="imageUpload" accept="image/*">
+    <br><br>
+
+    <!-- Image element to display the chosen image -->
+    <img id="img" src="" alt="Selected Image" style="max-width: 300px;">
+    <br><br>
+
+    <!-- Button to classify the image -->
+    <button id="classifyBtn">Predict Image</button>
+
+    <!-- Result display -->
+    <p id="predictionResult"></p>
+</body>
+
+<!-- Load TensorFlow.js -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+<!-- Load the MobileNet model -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+
+<script src="./script.js"></script>
+</html>
+
