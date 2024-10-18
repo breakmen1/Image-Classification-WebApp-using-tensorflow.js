@@ -26,7 +26,7 @@ classifyBtn.addEventListener('click', () => {
     if (imgElement.src) {
         model.classify(imgElement).then(predictions => {
             console.log('Predictions:', predictions);
-            predictionResult.innerText = `Predictions: ${predictions[0].className}, Probability: ${predictions[0].probability.toFixed(2)}`;
+            predictionResult.innerText = `Predicted: ${predictions[0].className}, Probability: ${(predictions[0].probability * 100).toFixed(2)}%`; // Updated to show percentage
         }).catch(err => {
             console.error('Error in classification:', err);
             predictionResult.innerText = 'Error in classification.';
